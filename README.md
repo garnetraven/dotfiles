@@ -18,6 +18,14 @@ $ sudo apt install -S git
 $ sudo apt install -S stow
 ```
 
+### Neovim
+
+```
+$ sudo add-apt-repository ppa:neovim-ppa/unstable
+$ sudo apt-get update
+$ sudo apt-get install neovim
+```
+
 ## Installation
 
 First, check out the dotfiles repo in your $HOME directory using git
