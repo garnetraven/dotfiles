@@ -11,9 +11,14 @@ lsp_zero.extend_lspconfig({
   capabilities = require('cmp_nvim_lsp').default_capabilities()
 })
 
+require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = { "jdtls", "rust_analyzer", "clangd", "pyright"}
+})
+
 -- Replace the language servers listed here
 -- with the ones you have installed in your system
 require('lspconfig').rust_analyzer.setup({})
-require('lspconfig').java_language_server.setup({})
+require('lspconfig').jdtls.setup({})
 require('lspconfig').clangd.setup({})
 require('lspconfig').pyright.setup({})
